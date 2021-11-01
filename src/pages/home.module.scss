@@ -1,41 +1,56 @@
 .posts {
-  list-style: none;
-  margin-top: 4rem;
+  margin-top: 2rem;
 
-  h1 {
-    font-size: 1.75rem;
-    color: var(--heading);
+  > a {
+    display: block;
   }
-  p {
+
+  a + a {
+    margin-top: 3rem;
+  }
+
+  button {
+    margin-top: 5rem;
+    background: transparent;
+    border: none;
+    font-weight: 600;
     font-size: 1.125rem;
-
-    margin: 0.5rem 0 1.5rem 0;
-  }
-  li {
-    padding: 48px 0;
-  }
-  .postDetails {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    gap: 1.5rem;
-    color: var(--info);
-  }
-
-  .postIconGroup {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    color: var(--highlight);
   }
 }
-.loadMore {
-  font-size: 1.125rem;
-  width: fit-content;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  color: var(--highlight);
-  font-weight: 600;
-  margin-top: 24px;
 
+.post {
+  strong {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--heading);
+
+  }
+
+  strong:hover {
+    color: var(--highlight);
+  }
+
+  p {
+    margin-top: 0.5rem;
+    font-size: 1.125rem;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    margin-top: 1.6rem;
+  }
+
+  & li {
+    font-size: 0.875rem;
+
+    & svg {
+      margin-right: 0.5rem;
+    }
+
+    & + li {
+      margin-left: 1.5rem;
+    }
+  }
 }
